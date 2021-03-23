@@ -61,8 +61,9 @@ app.use(errorHandler);
 
 // el el puerto que esta corriendo nuestra aplicacion
 app.listen(config.port, () => {
-  const debug = require("debug")("app:server");
-  debug(`prendido http://localhost:${config.port}`);
+  // const debug = require("debug")("app:server");
+  // debug(`prendido http://localhost:${config.port}`);
+  console.log(`prendido http://localhost:${config.port}`);
 });
 
 

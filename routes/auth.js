@@ -64,8 +64,9 @@ function authApi(app) {
 
           // creamos un token, y lo firmamos son nuestro secret,
           // y le damos una opccion para que expire en 15 minutos, para tener un token seguro
+          // expiresIn: '15m'
           const token = jwt.sign(payload, config.authJwtSecret, {
-            expiresIn: '15m'
+            expiresIn: '120m'
           });
 
           return res.status(200).json({ token, user: { id, name, email } });
